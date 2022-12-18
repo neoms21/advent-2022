@@ -1,6 +1,7 @@
 import path, { dirname } from 'path';
 import read from '../readInput';
 import { tree } from './tree';
+import { v4 as uuidv4 } from 'uuid';
 
 enum CommandType {
   DIRECTORY_CHANGE = 'dir_change',
@@ -19,12 +20,13 @@ const regexes = [
 ];
 
 type Structure = {
+  id: string;
   name: string;
   children: Array<Structure>;
   files: Array<{ fileName: string; size: number }>;
   level: number;
   totalSize: number;
-  parent?: Structure;
+  parentName: string;
 };
 
 let structure: Structure;
@@ -47,18 +49,24 @@ let parent: Structure | null;
 // };
 // let active: Structure;
 
-const findParent = (tree: Structure[], level: number, childName: string) => {
+const findParent = (
+  tree: Structure[],
+  level: number,
+  childName: string,
+  parentName: string,
+) => {
   if (parent) return;
 
   tree.forEach((node) => {
     if (
       node.level === level &&
+      node.id === parentName &&
       node.children.find((c) => c.name === childName)
     ) {
       parent = node;
       return;
     } else {
-      findParent(node.children, level, childName); // if not found go one level deeper.
+      return findParent(node.children, level, childName, parentName); // if not found go one level deeper.Ÿ
     }
   });
 };
@@ -71,11 +79,13 @@ const solution = async () => {
       const dirName = command.replace('$ cd ', '');
       if (!structure) {
         structure = {
+          id: uuidv4(),
           name: dirName,
           children: [],
           files: [],
           level: 0,
           totalSize: 0,
+          parentName: 'root',
         };
         activeDir = structure;
       }
@@ -94,11 +104,13 @@ const solution = async () => {
         const [_, name] = command.split(' ');
 
         activeDir?.children?.push({
+          id: uuidv4(),
           name,
           children: [],
           level: activeDir?.level + 1,
           files: [],
           totalSize: 0,
+          parentName: activeDir?.id,
         });
 
         break;
@@ -108,8 +120,8 @@ const solution = async () => {
         const childDir = activeDir?.children.find(
           (s: any) => s.name === dirName,
         );
-        // if (dirName === 'vlrs') {
-        //   console.log('After', childDir);
+        // if (index === 397) {
+        // console.log(command, dirName, activeDir);
         // }
         activeDir = childDir;
 
@@ -120,18 +132,34 @@ const solution = async () => {
         parent = null;
 
         const levelToFind = (activeDir?.level || 0) - 1;
-        // console.log(
-        //   '🚀 ~ file: index.ts:123 ~ commands.forEach ~ levelToFind',
-        //   levelToFind,
-        //   activeDir?.name,
-        //   activeDir?.level,
-        //   index,
-        // );
+        if (index >= 33 && index <= 35) {
+          console.log(
+            '🚀 ~ file: index.ts:123 ~ commands.forEach ~ levelToFind',
+            command,
+            activeDir?.level,
+            activeDir?.name,
+            activeDir?.parentName,
+            index,
+          );
+        }
         if (levelToFind === 0) {
           parent = structure;
         } else
-          findParent(structure.children, levelToFind, activeDir?.name || '');
-
+          findParent(
+            structure.children,
+            levelToFind,
+            activeDir?.name || '',
+            activeDir?.parentName || '',
+          );
+        if (index >= 33 && index <= 35) {
+          console.log(
+            '🚀After finding parent',
+            command,
+            parent?.level,
+            parent?.name,
+            index,
+          );
+        }
         activeDir = parent!;
 
         break;
@@ -141,7 +169,7 @@ const solution = async () => {
     }
   });
 
-  // console.log(JSON.stringify(structure));
+  console.log(JSON.stringify(structure));
 };
 
 export default solution;

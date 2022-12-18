@@ -1,23 +1,154 @@
-$ cd /
-$ ls
-dir a
-14848514 b.txt
-8504156 c.dat
-dir d
-$ cd a
-$ ls
-dir e
-29116 f
-2557 g
-62596 h.lst
-$ cd e
-$ ls
-584 i
-$ cd ..
-$ cd ..
-$ cd d
-$ ls
-4060174 j
-8033020 d.log
-5626152 d.ext
-7214296 k
+{
+  "id": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6",
+  "name": "/",
+  "children": [
+    {
+      "id": "3d4d78dd-73c2-410c-af93-c9a647b1e1d3",
+      "name": "bgmjrlz",
+      "children": [
+        {
+          "id": "4cd9d4cc-516f-4ca1-80fb-513499bd41bd",
+          "name": "dhqzgdl",
+          "children": [
+            {
+              "id": "f18c17a2-e6d6-4b5f-a9d4-e44fe6a81f2e",
+              "name": "jjshzrhd",
+              "children": [
+                {
+                  "id": "33f4c162-e759-44af-af7f-1573b55a9cb3",
+                  "name": "jjshzrhd",
+                  "children": [],
+                  "level": 4,
+                  "files": [{ "size": 81645, "fileName": "gfhfplmm" }],
+                  "totalSize": 81645,
+                  "parentName": "f18c17a2-e6d6-4b5f-a9d4-e44fe6a81f2e"
+                }
+              ],
+              "level": 3,
+              "files": [],
+              "totalSize": 0,
+              "parentName": "4cd9d4cc-516f-4ca1-80fb-513499bd41bd"
+            },
+            {
+              "id": "6f016850-8173-47bf-b028-19873a814a2e",
+              "name": "jlfz",
+              "children": [],
+              "level": 3,
+              "files": [],
+              "totalSize": 0,
+              "parentName": "4cd9d4cc-516f-4ca1-80fb-513499bd41bd"
+            },
+            {
+              "id": "dd16eb00-4f89-4760-89e1-e4b3199e87ce",
+              "name": "vqvvwgt",
+              "children": [],
+              "level": 3,
+              "files": [],
+              "totalSize": 0,
+              "parentName": "4cd9d4cc-516f-4ca1-80fb-513499bd41bd"
+            },
+            {
+              "id": "d81ca16e-8015-4a49-b439-e35265f8ab03",
+              "name": "zcqbt",
+              "children": [],
+              "level": 3,
+              "files": [],
+              "totalSize": 0,
+              "parentName": "4cd9d4cc-516f-4ca1-80fb-513499bd41bd"
+            }
+          ],
+          "level": 2,
+          "files": [],
+          "totalSize": 0,
+          "parentName": "3d4d78dd-73c2-410c-af93-c9a647b1e1d3"
+        },
+        {
+          "id": "0c8f3dea-7c55-47ac-8bac-efebd7b4ec79",
+          "name": "djtchhmw",
+          "children": [],
+          "level": 2,
+          "files": [],
+          "totalSize": 0,
+          "parentName": "3d4d78dd-73c2-410c-af93-c9a647b1e1d3"
+        },
+        {
+          "id": "b7b74f6c-5afb-4b41-bc0e-09637377a364",
+          "name": "tvq",
+          "children": [],
+          "level": 2,
+          "files": [],
+          "totalSize": 0,
+          "parentName": "3d4d78dd-73c2-410c-af93-c9a647b1e1d3"
+        }
+      ],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    },
+    {
+      "id": "2c8e6b27-cd47-4d70-a00e-53ed73599f7a",
+      "name": "bhp",
+      "children": [],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    },
+    {
+      "id": "cf521372-48ad-45dc-927a-88f55ea67582",
+      "name": "cbcwz",
+      "children": [],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    },
+    {
+      "id": "73b6516f-05f7-4165-9813-414841ebb00e",
+      "name": "fvhmzqc",
+      "children": [],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    },
+    {
+      "id": "2dbc5e39-3387-446c-9aaa-3ba5c7e5067f",
+      "name": "hqmlnpn",
+      "children": [],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    },
+    {
+      "id": "a4c631c9-0b5a-452e-8e09-99f36b72048a",
+      "name": "rbztmqjn",
+      "children": [],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    },
+    {
+      "id": "680ac572-066a-47f7-8dcf-c9a9de7dac59",
+      "name": "vfrtt",
+      "children": [],
+      "level": 1,
+      "files": [],
+      "totalSize": 0,
+      "parentName": "16e2573b-bac6-4215-b3e1-5b3c0dc849d6"
+    }
+  ],
+  "files": [
+    { "size": 169838, "fileName": "fddw.bgw" },
+    { "size": 248637, "fileName": "jtwpn.lnr" },
+    { "size": 319470, "fileName": "lnmrrht.zbn" },
+    { "size": 99548, "fileName": "pqpslbtn" },
+    { "size": 102720, "fileName": "rqpt" }
+  ],
+  "level": 0,
+  "totalSize": 940213,
+  "parentName": "root"
+}
